@@ -1,0 +1,56 @@
+
+1.  Crear app react con npx create-react-app ./
+
+2.  Borrar carpeta src y Crear carpeta limpia con archivos index.js y App.jsx
+
+3.  Copiar y pegar archivos buscador.svg y App.css para los estilos para importarlos
+
+4.  Codifico en el componente principal App.jsx (archivo) lo siguiente:
+
+5.  Creo cuenta en https://www.omdbapi.com/apikey.aspx     luego activo api-key y obtengo el valor api-key del email par añadirla en API-URL
+
+6.  Afuera del componente App (adentro de archivo), defino constante API_URL con url de la API y le añado el api-key recibido por email.
+
+7.  Importo el hook useEffect desde libreria react para buscar y conectar con API apenas el componente App cargue.
+
+8.  Llamo al hook useEffect y le paso como parametro una Callback Function y un array de dependencias como sintacticamente el useEffect se utiliza.
+
+9.  Usando fetch con Async await function conecto a la Api y el array de resultados se envian a consola para probar.
+
+10. Importamos la hoja de estilos para poder inyectar los resultados pero no el la consola sino ahora en la app React--->   import './App.css'
+
+11. Comenzamos a codificar con codigo jsx el return del componente creando la clase app
+
+12. Dentro de app, creamos un input con 3 propiedades cruciales: placeholder, value y Onchange
+
+13. Importamos la imagen svg del icono de buscar 
+
+14. Se crea una tag imagen con las propiedades origen, alt y onClick y en origen inyectamos
+
+15. Debajo del div <img>, Creamos un nuevo <div> con clase "container" y adentro un nuevo <div> con clase "movie" y adentro un <div> que contendra un tag <p>
+
+16. Copiamos un objeto estatico desde consola y lo pegamos como datos estaticos debajo de API_URL
+
+17. Extraemos del objeto estatico los valores de las propiedades Poster, Title, Type
+
+18. Creamos un nuevo componente TarjetaPelicula.jsx y pegamos el codigo del <div> movie
+
+19. Usamos props para pasar valores entre componentes usando destructuring objects movie1
+
+20. Ahora importamos el componente TarjetaPelicula desde nuestro componente principal App
+
+21.  Inyectamos el componente con una sola linea (reemplazamos las anteriores) y usamos los props
+
+22.  Creamos un nuevo hook, useState para poder mapear no una sino todas las peliculas.  Pimero se importa y luego se inyecta y se inicializa
+22.1 en vez de enviar a consola  setMovies(data.Search);   y en vez de una sola pelicula asigno array pero en el ternario.......
+
+23.  ......con un condicional operador ternario gestionamos cuando hayan instancias de la pelicula buscada o no.
+	Adentro de un ciclo map iteramos todo el array que coincida con el parametro de busqueda creando la copia con los elementos que coincidan
+
+24.  actualizamos el nombre del prop movie
+
+25.  creamos funcionalidad para la busqueda. Creamos nuevo hook state y usamos en el state y el seteador como valores en las propiedades del input
+
+26.  Usamos el state en la imagen del icono de busqueda, para renderizar el array de peliculas
+
+
